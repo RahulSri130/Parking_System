@@ -1,0 +1,53 @@
+package project;
+
+import java.util.Scanner;
+
+public class parking_system {
+    public static void main(String[] args) {
+        int n = 1;
+        Scanner sc = new Scanner(System.in);
+        System.out.println("***************");
+        System.out.println("");
+        System.out.println("             PARKING SYSTEM                  ");
+        System.out.println("");
+        System.out.println("      Welcome To Our Parking System          ");
+        System.out.println("***************");
+        System.out.println("");
+        System.out.println("Enter you vehicle model: ");
+        String str = sc.nextLine();
+        System.out.println("please enter your vehicle no.: ");
+        String vno = sc.nextLine();
+        System.out.println("");
+        while (n == 1) {
+            int option;
+            System.out.println("1:- Two wheeler");
+            System.out.println("2:- Four wheeler");
+            option = sc.nextInt();
+            switch (option) {
+                case 1:
+                    System.out.println("********");
+                    System.out.println("**Two Wheeler**");
+                    System.out.println(" Charge: 20 Rupees");
+                    System.out.println(" Vehicle model :"+str);
+                    System.out.println("Vehicle no.:"+vno);
+                    System.out.println("Coupon Valid For 24 hrs");
+                    System.out.println("     Thank you! ");
+                    System.out.println("********");
+                    break;
+                case 2:
+                    System.out.println("********");
+                    System.out.println("**Four Wheeler**");
+                    System.out.println("  Charge: 40 rupees");
+                    System.out.println("  Vehicle model :"+str);
+                    System.out.println("Vehicle no.:"+vno);
+                    System.out.println("Coupon Valid For 24 hrs");
+                    System.out.println("     Thank you! ");
+                    System.out.println("********");
+                    break;
+                default:
+                    System.out.println("invalid input");
+            }
+            n-=1;
+        }
+    }
+}
